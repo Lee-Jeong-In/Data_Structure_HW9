@@ -101,7 +101,7 @@ int main()
 
 int initializeBST(Node** h)         // 이진트리의 시작인 headnode 생성
 {
-    if(h!=NULL)
+    if(*h!=NULL)
         freeBST(*h);
 
     (*h)=(Node*)malloc(sizeof(Node));       // *h는 headnode가 만들어질 메모리의 위치

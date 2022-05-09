@@ -229,7 +229,7 @@ Node* searchRecursive(Node* ptr, int key)       // recursive방식으로 찾는�
     if(ptr==NULL)                               // 2번 이상의 recursive call로 원하는 node를 찾았을 경우 recursive call을 멈추게한다.
         return NULL;
     
-    if(ptr->key > key)
+    if(ptr->key < key)
         ptr=searchRecursive(ptr->right,key);    // 작으면 오른쪽으로
     else
         ptr=searchRecursive(ptr->left,key);     // 크면 왼쪽으로
